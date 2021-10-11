@@ -1,8 +1,6 @@
 const API = "3fd2be6f0c70a2a598f084ddfb75487c";
 
-let url =
-  `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=1`;
-
+let url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=1`;
 
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 const SEARCH_API =
@@ -67,10 +65,17 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+function change(clicked_id) {
+  url = `https://api.themoviedb.org/3/discover/movie?api_key=${API}&with_genres=${clicked_id}`;
+  getMovies(url);
+}
+function popular() {
+  url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=1`;
+  getMovies(url);
+}
 
-
- function change(clicked_id) {
-   url = `https://api.themoviedb.org/3/discover/movie?api_key=${API}&with_genres=${clicked_id}`;
-   getMovies(url);
-
- }
+// function loadNextPage() {
+//   pageNumber;
+//   let url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=${pageNumber}`;
+//   getMovies(url);
+// }
