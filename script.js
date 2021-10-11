@@ -74,8 +74,8 @@ function popular() {
   getMovies(url);
 }
 
-// function loadNextPage() {
-//   pageNumber;
-//   let url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=${pageNumber}`;
-//   getMovies(url);
-// }
+function loadNextPage() {
+  z = Math.ceil(1 + (25 - 1) * Math.random());
+  url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=${z}`;
+  getMovies(url);
+}
