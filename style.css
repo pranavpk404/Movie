@@ -1,44 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
-
 :root {
-  --primary-color: #22254b;
-  --secondary-color: #373b69;
-}
-
-* {
-  box-sizing: border-box;
+  --primary-color: #70746c;
+  --secondary-color: #383a38;
 }
 
 body {
   background-color: var(--primary-color);
-  font-family: "Poppins", sans-serif;
   margin: 0;
 }
 
-header {
-  padding: 1rem;
+nav {
+  background: black;
   display: flex;
-  justify-content: flex-end;
-  background-color: var(--secondary-color);
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-right: 20px;
+  transition-duration: 0.5s;
+}
+
+.btn {
+  list-style: none;
+  font-family: "Acme", sans-serif;
+  background-color: #000000;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-family: "Acme", sans-serif;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #061f58af;
+  border-radius: 5px;
 }
 
 .search {
   background-color: transparent;
-  border: 2px solid var(--primary-color);
-  border-radius: 50px;
+  border-radius: 6px;
   font-family: inherit;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   color: #fff;
-}
-
-.search::placeholder {
-  color: #7378c5;
+  width: 179px;
+  height: 34px;
+  border: 2px solid springgreen;
+  margin: 16px;
 }
 
 .search:focus {
   outline: none;
-  background-color: var(--primary-color);
 }
 
 main {
@@ -50,13 +94,16 @@ main {
 .movie {
   width: 300px;
   margin: 1rem;
+  transition: 0.5s;
   background-color: var(--secondary-color);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
   border-radius: 3px;
 }
-
+.movie:hover {
+  box-shadow: 0 30px 70px #000;
+  transform: scale3d(1.05, 1.05, 1.05);
+}
 .movie img {
   width: 100%;
 }
@@ -79,7 +126,7 @@ main {
   background-color: var(--primary-color);
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
-  font-weight: bold;
+  font-size: 25px;
 }
 
 .movie-info span.green {
@@ -109,4 +156,5 @@ main {
 
 .movie:hover .overview {
   transform: translateY(0);
+  transition: 0.5s ease-out;
 }
