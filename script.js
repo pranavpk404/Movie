@@ -79,3 +79,23 @@ function loadNextPage() {
   url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=${z}`;
   getMovies(url);
 }
+
+const darkButton = document.getElementById("dark");
+const lightButton = document.getElementById("light");
+const body = document.body;
+// Apply the cached theme on reload
+const theme = localStorage.getItem("theme");
+if (theme) {
+  let = bodyValue = body.classList.value;
+  body.classList.replace(bodyValue, theme);
+}
+// Button Event Handlers
+darkButton.onclick = () => {
+  body.classList.replace("theme-light", "theme-dark");
+  localStorage.setItem("theme", "theme-dark");
+};
+
+lightButton.onclick = () => {
+  body.classList.replace("theme-dark", "theme-light");
+  localStorage.setItem("theme", "theme-light");
+};
