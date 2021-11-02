@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
     <title>Movie Finder</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
   </head>
-  <body id="body" class="theme-dark">
+  <body id="body" class="theme-1">
     <header>
       <nav class="navbar">
         <ul>
@@ -158,11 +158,15 @@
               </div>
             </div>
           </li>
-          <li>
-            <label class="switch">
-              <input type="checkbox" id="toggle" onclick="myFunction()" />
-              <span class="slider round"></span>
-            </label>
+          <li id="list">
+            <div class="dropdown">
+              <button id="btn" class="dropbtn">Theme</button>
+              <div class="dropdown-content">
+                <a class="dropdown-item" id="theme-1" href="#">theme-1</a>
+                <a class="dropdown-item" id="theme-2" href="#">theme-2</a>
+                <a class="dropdown-item" id="theme-3" href="#">theme-3</a>
+              </div>
+            </div>
           </li>
         </ul>
         <form id="form">
@@ -173,6 +177,6 @@
 
     <main id="main"></main>
     <button id="loadMore" onclick="loadNextPage()">Load More</button>
-    <script src="script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
