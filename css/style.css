@@ -1,3 +1,4 @@
+/* Themes */
 .theme-1 {
   --primary-color: #1b2021;
   --secondary-color: #51513d;
@@ -14,29 +15,30 @@
   --secondary-color: #2b9348;
   --text-border-color: white;
 }
-
 body {
   text-transform: capitalize;
   background-color: var(--primary-color);
   font-family: "Open Sans", sans-serif;
-  margin: 0;
 }
 
-nav {
+/* NavBar  */
+.navbar {
   background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
 }
 
-nav ul {
+.navbar ul {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
-nav ul li {
+.navbar ul li {
   list-style: none;
   margin-right: 20px;
   transition-duration: 0.5s;
 }
-
+/* DropDown Button */
 .btn {
   background-color: var(--secondary-color);
   color: var(--text-border-color);
@@ -79,9 +81,27 @@ nav ul li {
   background-color: #061f58af;
   border-radius: 5px;
 }
+/* Theme Choser */
+.themeCircle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+}
 
+#theme-1 {
+  background-color: #51513d;
+}
+#theme-2 {
+  background-color: #240046;
+}
+#theme-3 {
+  background-color: #2b9348;
+}
+.themeCircle {
+  margin: auto 5px auto 5px;
+}
 .search {
-  color: var(--text-border-color);
+  color: white;
   background-color: transparent;
   border-radius: 6px;
   font-size: 1rem;
@@ -91,17 +111,19 @@ nav ul li {
   height: 34px;
   border: 1px solid black;
 }
+.search:hover {
+  background-color: black;
+}
 
 .search:focus {
   outline: none;
 }
-
-main {
+/* Card */
+#main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .movie {
   width: 300px;
   margin: 1rem;
@@ -179,30 +201,14 @@ main {
   border-radius: 5px;
 }
 
-#btn {
-  border: none;
-  font-size: 18px;
-  color: var(--text-border-color);
-  margin-top: 6px;
-  background-color: var(--secondary-color);
-}
+@media screen and (max-width: 678px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.themeCircle {
-  width: 25px;
-  height: 25px;
-  background-color: chartreuse;
-  border-radius: 50px;
-}
-
-#theme-1 {
-  background-color: #51513d;
-}
-#theme-2 {
-  background-color: #240046;
-}
-#theme-3 {
-  background-color: #2b9348;
-}
-.themeCircle {
-  margin: auto 5px auto 5px;
+  .themeCircle {
+    width: 15px;
+    height: 15px;
+  }
 }
