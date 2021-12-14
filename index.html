@@ -12,10 +12,6 @@
     />
     <title>Movie Finder</title>
     <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
-   <meta
-      name="Movie Finder"
-      content="Movie finder TMBD rating"
-    />
   </head>
   <body id="body" class="theme-1">
     <header>
@@ -162,16 +158,12 @@
               </div>
             </div>
           </li>
-          <li id="list">
-            <div class="dropdown">
-              <button id="btn" class="dropbtn">Theme</button>
-              <div class="dropdown-content">
-                <a class="dropdown-item" id="theme-1" href="#">theme-1</a>
-                <a class="dropdown-item" id="theme-2" href="#">theme-2</a>
-                <a class="dropdown-item" id="theme-3" href="#">theme-3</a>
-              </div>
-            </div>
-          </li>
+          <ul>
+            <button class="btn" id="themesbtn">Themes</button>
+            <a class="dropdown-item themeCircle" id="theme-1" href="#"></a>
+            <a class="dropdown-item themeCircle" id="theme-2" href="#"></a>
+            <a class="dropdown-item themeCircle" id="theme-3" href="#"></a>
+          </ul>
         </ul>
         <form id="form">
           <input type="text" id="search" class="search" placeholder="Search" />
@@ -180,7 +172,6 @@
     </header>
 
     <main id="main"></main>
-    <button id="loadMore" onclick="loadNextPage()">Load More</button>
     <script src="js/index.js"></script>
   </body>
 </html>

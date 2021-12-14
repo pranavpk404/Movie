@@ -73,16 +73,6 @@ function popular() {
   url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=1`;
   getMovies(url);
 }
-
-function loadNextPage() {
-  z = Math.ceil(1 + (25 - 1) * Math.random());
-  url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=${z}`;
-  getMovies(url);
-}
-const darkButton = document.getElementById("");
-const lightButton = document.getElementById("");
-const contrastButton = document.getElementById("");
-
 const theme = localStorage.getItem("theme");
 if (theme) {
   let bodyValue = body.classList.value;
