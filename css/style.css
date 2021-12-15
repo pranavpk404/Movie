@@ -30,7 +30,6 @@ body {
 
 .navbar ul {
   display: flex;
-  margin: 0;
   padding: 0;
 }
 .navbar ul li {
@@ -125,7 +124,7 @@ body {
   justify-content: center;
 }
 .movie {
-  width: 300px;
+  width: 12rem;
   margin: 1rem;
   transition: 0.5s;
   background-color: var(--secondary-color);
