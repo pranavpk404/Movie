@@ -125,7 +125,7 @@ body {
 }
 .movie {
   width: 16rem;
-  margin: 1rem;
+  margin: 2em;
   transition: 0.5s;
   background-color: var(--secondary-color);
   position: relative;
