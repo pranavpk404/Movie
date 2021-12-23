@@ -18,7 +18,9 @@
 body {
   text-transform: capitalize;
   background-color: var(--primary-color);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0;
 }
 
 /* NavBar  */
@@ -26,10 +28,13 @@ body {
   background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -125,8 +130,8 @@ body {
   justify-content: center;
 }
 .movie {
-  width: 300px;
-  margin: 1rem;
+  width: 15rem;
+  margin: 2em;
   transition: 0.5s;
   background-color: var(--secondary-color);
   position: relative;
