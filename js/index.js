@@ -69,10 +69,7 @@ function change(clicked_id) {
   url = `https://api.themoviedb.org/3/discover/movie?api_key=${API}&with_genres=${clicked_id}`;
   getMovies(url);
 }
-function popular() {
-  url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API}&page=1`;
-  getMovies(url);
-}
+
 const theme = localStorage.getItem("theme");
 if (theme) {
   let bodyValue = body.classList.value;
